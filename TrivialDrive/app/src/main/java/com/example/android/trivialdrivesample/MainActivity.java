@@ -161,8 +161,11 @@ public class MainActivity extends Activity implements IabBroadcastListener,
          * want to make it easy for an attacker to replace the public key with one
          * of their own and then fake messages from the server.
          */
+
+        String key_test = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk/nNgx2r4+QQnfI8arPJdCf63/H7yMenQcwlCK/kC2Q8D/wbeA5CXMnJ2C0zedpd3I/88A/avMLFvHh8yLTDKJbRi2PMPUJ9GRr6S7uttL3R5nJpFzXuMq7Tz6VVSlaRRTaZ7zfvgH97XiZfe62I2Dwq+eAuoqhkONMp0tqyfaxIchnXOHu3t3xzohI1BjlfVIRY3rDQSclqsHriDZd4PcAYvVF+mHPTYY/euUhPc1iIpO3e4repxGEJKEt+UZ8Mawz8yx0TAfUl7L7QJhMkpOIf/MKEI9UT4+cNHvYbzpSQwT9HoTbJOkKRCcoeoCgIhjyLrNj+Vi3hgPfVzTh1rQIDAQAB";
         String base64EncodedPublicKey = "CONSTRUCT_YOUR_KEY_AND_PLACE_IT_HERE";
 
+        base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk/nNgx2r4+QQnfI8arPJdCf63/H7yMenQcwlCK/kC2Q8D/wbeA5CXMnJ2C0zedpd3I/88A/avMLFvHh8yLTDKJbRi2PMPUJ9GRr6S7uttL3R5nJpFzXuMq7Tz6VVSlaRRTaZ7zfvgH97XiZfe62I2Dwq+eAuoqhkONMp0tqyfaxIchnXOHu3t3xzohI1BjlfVIRY3rDQSclqsHriDZd4PcAYvVF+mHPTYY/euUhPc1iIpO3e4repxGEJKEt+UZ8Mawz8yx0TAfUl7L7QJhMkpOIf/MKEI9UT4+cNHvYbzpSQwT9HoTbJOkKRCcoeoCgIhjyLrNj+Vi3hgPfVzTh1rQIDAQAB";
         // Some sanity checks to see if the developer (that's you!) really followed the
         // instructions to run this sample (don't put these checks on your app!)
         if (base64EncodedPublicKey.contains("CONSTRUCT_YOUR")) {
