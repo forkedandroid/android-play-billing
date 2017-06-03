@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.JavascriptInterface;
@@ -201,7 +202,14 @@ public class WebViewActivity extends Activity implements  Communicator {
             //params.append(ServiceUtility.addToPostParams(AvenuesParams.ENC_VAL, URLEncoder.encode(encVal)));
             String encoded = encVal;
             try {
-                encoded = URLEncoder.encode(encVal,"UTF-8");
+                if(encoded !=null && encoded.length() > 0) {
+                    encoded = URLEncoder.encode(encVal, "UTF-8");
+                }
+                else
+                {
+                    Log.e("=WebView Activity=","====Null --encoded--encVal--==");
+                    encoded = "";
+                }
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
